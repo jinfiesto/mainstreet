@@ -11,7 +11,7 @@ module MainStreet
 
     def failure_message
       if !result
-        "Address can't be confirmed"
+        "can't be confirmed"
       elsif result.respond_to?(:analysis)
         analysis = result.analysis
 
@@ -20,7 +20,7 @@ module MainStreet
           when "Verified"
             nil # success!!
           when "Ambiguous", "Partial", "None"
-            "Address can't be confirmed"
+            "can't be confirmed"
           else
             raise "Unknown verification_status"
           end
@@ -29,11 +29,11 @@ module MainStreet
           when "Y"
             nil # success!!
           when "N"
-            "Address can't be confirmed"
+            "can't be confirmed"
           when "S"
-            "Apartment or suite can't be confirmed"
+            "apartment or suite can't be confirmed"
           when "D"
-            "Apartment or suite is missing"
+            "apartment or suite is missing"
           else
             raise "Unknown dpv_match_code"
           end

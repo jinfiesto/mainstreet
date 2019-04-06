@@ -31,9 +31,9 @@ module MainStreet
           when "N"
             "can't be confirmed"
           when "S"
-            "apartment or suite can't be confirmed"
+            nil
           when "D"
-            "apartment or suite is missing"
+            nil
           else
             raise "Unknown dpv_match_code"
           end
